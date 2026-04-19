@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="carGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="48" fill="url(#carGradient)"/>
+  
+  <!-- Car silhouette -->
+  <g fill="white">
+    <!-- Car body -->
+    <path d="M20 55 L20 70 L30 70 L30 65 L70 65 L70 70 L80 70 L80 55 L75 50 L25 50 Z"/>
+    
+    <!-- Car top -->
+    <path d="M30 50 L35 35 L65 35 L70 50 Z"/>
+    
+    <!-- Windows -->
+    <path d="M38 38 L62 38 L58 47 L42 47 Z" fill="#3B82F6"/>
+    
+    <!-- Wheels -->
+    <circle cx="32" cy="70" r="6" fill="#1F2937"/>
+    <circle cx="32" cy="70" r="3" fill="#9CA3AF"/>
+    <circle cx="68" cy="70" r="6" fill="#1F2937"/>
+    <circle cx="68" cy="70" r="3" fill="#9CA3AF"/>
+    
+    <!-- Headlights -->
+    <circle cx="78" cy="58" r="2" fill="#FCD34D"/>
+    <circle cx="22" cy="58" r="2" fill="#EF4444"/>
+  </g>
+  
+  <!-- Checkmark (voting symbol) -->
+  <path d="M75 25 L85 35 L75 45" stroke="white" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
