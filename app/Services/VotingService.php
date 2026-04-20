@@ -42,8 +42,8 @@ class VotingService
         $this->updateCache($cacheKey, $shownIds, $cars);
 
         return new CarPairData(
-            left: CarData::from($cars[0]),
-            right: CarData::from($cars[1])
+            left: CarData::fromModel($cars[0]),
+            right: CarData::fromModel($cars[1])
         );
     }
 

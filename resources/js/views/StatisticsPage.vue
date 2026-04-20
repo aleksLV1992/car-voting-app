@@ -217,11 +217,14 @@ const clearFilters = (): void => {
 };
 
 const handlePageChange = (newPage: number): void => {
+    currentPage.value = newPage;
     statisticsStore.fetchStatistics(newPage, perPage.value);
 };
 
 const updatePerPage = (newPerPage: number): void => {
-    statisticsStore.fetchStatistics(1, newPerPage);
+    perPage.value = newPerPage;
+    currentPage.value = 1;
+    statisticsStore.fetchStatistics(currentPage.value, perPage.value);
 };
 
 const openImageViewer = (car: CarRecord): void => {

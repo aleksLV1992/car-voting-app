@@ -2,6 +2,9 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -23,15 +26,15 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property int|null $winning_bid_amount Сумма выигрышной ставки
  * @property string|null $winning_bid_location Локация выигрышной ставки
  * @property int $votes_count Количество голосов
- * @property \Carbon\Carbon $created_at Дата создания
- * @property \Carbon\Carbon $updated_at Дата обновления
- * @property-read \Illuminate\Database\Eloquent\Collection<int, Vote> $votes Коллекция голосов
+ * @property Carbon $created_at Дата создания
+ * @property Carbon $updated_at Дата обновления
+ * @property-read Collection<int, Vote> $votes Коллекция голосов
  *
- * @method static \Illuminate\Database\Eloquent\Builder|Car whereMake(string $make)
- * @method static \Illuminate\Database\Eloquent\Builder|Car whereModel(string $model)
- * @method static \Illuminate\Database\Eloquent\Builder|Car whereYear(int $year)
- * @method static \Illuminate\Database\Eloquent\Builder|Car whereVotesCount(int $count)
- * @method static \Illuminate\Database\Eloquent\Builder|Car withVotes()
+ * @method static Builder|Car whereMake(string $make)
+ * @method static Builder|Car whereModel(string $model)
+ * @method static Builder|Car whereYear(int $year)
+ * @method static Builder|Car whereVotesCount(int $count)
+ * @method static Builder|Car withVotes()
  */
 class Car extends Model
 {
