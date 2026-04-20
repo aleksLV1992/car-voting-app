@@ -138,10 +138,7 @@
                 v-if="!loading && cars.length > 0"
                 :current-page="currentPage"
                 :last-page="lastPage"
-                :per-page="perPage"
-                :per-page-options="viewMode === 'cards' ? [9, 18, 27, 36] : [10, 25, 50, 100]"
                 @update:page="handlePageChange"
-                @update:per-page="updatePerPage"
             />
         </div>
     </div>
@@ -217,14 +214,7 @@ const clearFilters = (): void => {
 };
 
 const handlePageChange = (newPage: number): void => {
-    currentPage.value = newPage;
-    statisticsStore.fetchStatistics(newPage, perPage.value);
-};
-
-const updatePerPage = (newPerPage: number): void => {
-    perPage.value = newPerPage;
-    currentPage.value = 1;
-    statisticsStore.fetchStatistics(currentPage.value, perPage.value);
+    statisticsStore.fetchStatistics(newPage, 9);
 };
 
 const openImageViewer = (car: CarRecord): void => {
